@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
 
         val eventsTable = FirebaseDatabaseService("events", Event::class.java)
         eventsTable.addDataChangedListener { event, eventType ->
-            println(event.toString())
+            println("event: $event - $eventType")
         }
     }
 }
